@@ -15,21 +15,21 @@
 ##    i+=1
 
 
-##with O(n) complexity:
+##with O(n) complexity and in one pass:
 numbers = list(map(int,input("Enter List: ").split(",")))
 k = int(input("Enter value: "))
 i = 0
-list_temp = numbers.copy()
 match = False
-for e in numbers:
-    list_temp.pop(i)
-    if k - e in list_temp:
-        match = True
-        print(str(e) + " " + str(k-e))
-    i += 1
+for number in numbers:
     list_temp = numbers.copy()
+    list_temp.pop(i)
+    if k - number in list_temp:
+        match = True
+        print(str(number) + " " + str(k-number))
+    i += 1
 print(match)
 
 
 #print(any(map(lambda x: (k - x) in numbers, numbers)))
+##print(list(map(lambda x: (k - x) in numbers, numbers)))
 
