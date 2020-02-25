@@ -6,11 +6,13 @@ Good morning! Here's your coding interview problem for today.<br/><br/>
 This problem was asked by Google.<br/><br/>
 Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.<br/><br/>
 For example, given the following Node class:<br/><br/>
+```
 class Node:<br/>
     def __init__(self, val, left=None, right=None):<br/>
         self.val = val<br/>
         self.left = left<br/>
         self.right = right<br/><br/>
+```
 The following test should pass:<br/><br/>
 node = Node('root', Node('left', Node('left.left')), Node('right'))<br/>
 assert deserialize(serialize(node)).left.left.val == 'left.left'
