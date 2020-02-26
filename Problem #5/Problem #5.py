@@ -3,16 +3,7 @@ def cons(a, b):
         return f(a, b)
     return pair
 
-
-##result=cons(5,4)
-##print(result)
-##result(print)
-##cons(5,4)(print)
-##print(result.__closure__)
-##print(result.__closure__[0].cell_contents)
-##print(result.__closure__[1].cell_contents)
-
-
+##First solution
 ##def car(pair):
 ##    return pair.__closure__[0].cell_contents
 ##
@@ -23,6 +14,8 @@ def cons(a, b):
 ##print(car(cons(5,4)))
 ##print(cdr(cons(5,4)))
 
+
+##Second solution
 def car(pair):
     def return_first(a, b):
         return a
@@ -39,12 +32,13 @@ print(car(cons(5,4)))
 print(cdr(cons(5,4)))
 
 
-###################
-##cons(42,81)
-##pair(f):
-##    return f(42,81)
-##pair
-##car(pair)
-##return pair(return_first)
-##pair(return_first):
-##    return return_first(42,81)
+
+
+
+##result=cons(5,4)
+##print(result)
+##result(print)
+##cons(5,4)(print)
+##print(result.__closure__)
+##print(result.__closure__[0].cell_contents)
+##print(result.__closure__[1].cell_contents)
